@@ -6,14 +6,17 @@ const cookieParser = require('cookie-parser')
 const MongoStore = require('connect-mongo')
 const passport = require('passport')
 const compression = require('compression')
+var cors = require('cors')
 
 const { logger, loggerError } = require('./logger/config')
 
 require('dotenv').config()
 
+
 const initListeners = require('./listeners')
 const app = express()
 app.use(compression())
+app.use(cors())
 
 const http = require('http').Server(app)
 const io = require('socket.io')(http)
@@ -67,7 +70,7 @@ app.use('/api/auth', require('./routes/api/auth'))
 //Socket
 initListeners(io)
 
-const PORT = process.argv[2] ||  8080
+const PORT = process.env.PORT ||  8080
 
 
 const server = http.listen(PORT, () => {
