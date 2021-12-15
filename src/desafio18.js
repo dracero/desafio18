@@ -22,7 +22,7 @@ const http = require('http').Server(app)
 const io = require('socket.io')(http)
 
 //-- Database Connection 
-require('./config/db')
+//require('./config/db')
 
 //-- Passport Config
 require('./config/passport')(passport)
