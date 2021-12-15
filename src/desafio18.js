@@ -10,7 +10,7 @@ var cors = require('cors')
 
 const { logger, loggerError } = require('./logger/config')
 
-//require('dotenv').config()
+require('dotenv').config()
 
 
 const initListeners = require('./listeners')
