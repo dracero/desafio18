@@ -1,0 +1,10 @@
+pm2 start ./src/index.js --name='Cluster' --watch -- 8082 false false CLUSTER
+pm2 start ./src/index.js --name='Cluster' --watch -- 8083 false false CLUSTER
+pm2 start ./src/index.js --name='Cluster' --watch -- 8084 false false CLUSTER
+pm2 start ./src/index.js --name='Cluster' --watch -- 8085 false false CLUSTER
+=======
+
+nodemon index.js 8080 280805700571523 7fb2b9474177fd6735b9f7dbd449cc79 FORK
+nodemon index.js 8080 280805700571523 7fb2b9474177fd6735b9f7dbd449cc79 CLUSTER
+forever start index.js 8080 280805700571523 7fb2b9474177fd6735b9f7dbd449cc79 FORK
+forever start index.js 8080 280805700571523 7fb2b9474177fd6735b9f7dbd449cc79 CLUSTER

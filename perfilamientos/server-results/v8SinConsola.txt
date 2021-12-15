@@ -1,0 +1,105 @@
+Statistical profiling result from sinConsola.log, (4183 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   2808   67.1%          C:\WINDOWS\SYSTEM32\ntdll.dll
+   1366   32.7%          C:\Program Files\nodejs\node.exe
+      2    0.0%          C:\WINDOWS\System32\KERNELBASE.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      6    0.1%   85.7%  LazyCompile: *resolve path.js:153:10
+      1    0.0%   14.3%  LazyCompile: *isFileType fs.js:199:20
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      7    0.2%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+     10    0.2%  142.9%  GC
+   4176   99.8%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2808   67.1%  C:\WINDOWS\SYSTEM32\ntdll.dll
+    402   14.3%    LazyCompile: *readFileSync fs.js:391:22
+    402  100.0%      LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1081:37
+    312   77.6%        LazyCompile: *Module._load internal/modules/cjs/loader.js:724:24
+    312  100.0%          LazyCompile: ~Module.require internal/modules/cjs/loader.js:953:36
+    312  100.0%            LazyCompile: ~require internal/modules/cjs/helpers.js:91:31
+     90   22.4%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:925:33
+     90  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:724:24
+     90  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:953:36
+    219    7.8%    LazyCompile: *stat internal/modules/cjs/loader.js:145:14
+    143   65.3%      LazyCompile: ~tryFile internal/modules/cjs/loader.js:351:17
+    139   97.2%        LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:367:23
+    112   80.6%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+    112  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+     27   19.4%          LazyCompile: ~tryPackage internal/modules/cjs/loader.js:305:20
+     22   81.5%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      5   18.5%            LazyCompile: *Module._findPath internal/modules/cjs/loader.js:461:28
+      4    2.8%        LazyCompile: ~tryPackage internal/modules/cjs/loader.js:305:20
+      4  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      4  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+     49   22.4%      LazyCompile: *Module._findPath internal/modules/cjs/loader.js:461:28
+     49  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+     49  100.0%          LazyCompile: *Module._load internal/modules/cjs/loader.js:724:24
+     49  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:953:36
+     27   12.3%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+     27  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+     25   92.6%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:724:24
+     25  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:953:36
+      2    7.4%          LazyCompile: *Module._load internal/modules/cjs/loader.js:724:24
+      2  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:953:36
+
+   1366   32.7%  C:\Program Files\nodejs\node.exe
+   1309   95.8%    C:\Program Files\nodejs\node.exe
+    815   62.3%      LazyCompile: ~openSync fs.js:489:18
+    815  100.0%        LazyCompile: ~readFileSync fs.js:391:22
+    813   99.8%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1081:37
+    813  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:925:33
+    253   19.3%      LazyCompile: ~realpathSync fs.js:1718:22
+    216   85.4%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:360:20
+    208   96.3%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:351:17
+    190   91.3%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:367:23
+     18    8.7%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:305:20
+      8    3.7%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      8  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+     37   14.6%        LazyCompile: *Module._findPath internal/modules/cjs/loader.js:461:28
+     37  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+     37  100.0%            LazyCompile: *Module._load internal/modules/cjs/loader.js:724:24
+     97    7.4%      LazyCompile: ~stat internal/modules/cjs/loader.js:145:14
+     71   73.2%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:351:17
+     66   93.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:367:23
+     52   78.8%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+     14   21.2%            LazyCompile: ~tryPackage internal/modules/cjs/loader.js:305:20
+      5    7.0%          LazyCompile: ~tryPackage internal/modules/cjs/loader.js:305:20
+      5  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+     26   26.8%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+     25   96.2%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+     25  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:724:24
+      1    3.8%          LazyCompile: ~resolveMainPath internal/modules/run_main.js:12:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint internal/modules/run_main.js:69:31
+     35    2.7%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:973:18
+     35  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1026:37
+     35  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1081:37
+     35  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:925:33
+     32    2.4%      LazyCompile: ~read internal/modules/package_json_reader.js:16:14
+     30   93.8%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:257:21
+     27   90.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:439:24
+     27  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      3   10.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:288:26
+      3  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1081:37
+      2    6.3%        LazyCompile: *readPackage internal/modules/cjs/loader.js:257:21
+      2  100.0%          LazyCompile: ~tryPackage internal/modules/cjs/loader.js:305:20
+      2  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+
