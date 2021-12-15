@@ -10,7 +10,7 @@ var cors = require('cors')
 
 const { logger, loggerError } = require('./logger/config')
 
-require('dotenv').config()
+//require('dotenv').config()
 
 
 const initListeners = require('./listeners')
@@ -22,7 +22,7 @@ const http = require('http').Server(app)
 const io = require('socket.io')(http)
 
 //-- Database Connection 
-//require('./config/db')
+require('./config/db')
 
 //-- Passport Config
 require('./config/passport')(passport)
