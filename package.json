@@ -4,7 +4,7 @@
   "description": "",
   "main": "desafio18.js",
   "scripts": {
-    "start": "nodemon  ./src/index.js",
+    "start": "node  ./src/index.js",
     "start:forever": "forever start ./src/index.js"
   },
   "author": "",
